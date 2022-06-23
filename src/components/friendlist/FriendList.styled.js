@@ -1,9 +1,11 @@
-.friendList {
-    width: 300px;
+import styled from '@emotion/styled';
+
+export const List = styled.ul`
+    width: 310px;
     background-color: white;
     box-shadow: 0 0 10px -1px;
-}
-.friend {
+    `;
+export const Friend = styled.li` 
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
     display: flex;
     align-items: center;
@@ -14,23 +16,25 @@
     border-color: grey;
     box-shadow: 0 0 10px -1px;
     border-radius: 5px;
-    font-size: 20px;
-    font-weight: 500;
-}
-.friend:hover {
+    cursor: pointer;
+    &:hover { 
     transform: scale(1.03);
-}
-.status {
+    }
+    `;
+export const Status = styled.span`
     width: 15px;
     height: 15px;
     border-radius: 50%;
     margin-left: 10px;
     display: inline-block;
-    background-color: red;
-}
-.online {
-    background-color: green;
-}
-.avatar {
+    background-color: ${props => props.isOnline ? "green" : "red"};
+    `;
+export const Avatar = styled.img` 
     padding: 10px;
-}
+    width: 48px;
+    `;
+export const FriendName = styled.p`
+    font-size: 20px;
+    font-weight: 500;
+    `;
+

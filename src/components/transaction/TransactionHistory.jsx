@@ -1,26 +1,26 @@
 import PropTypes from 'prop-types';
-import css from './TransactionHistory.module.css';
+import {TransactionsTable, TableHead, TableBody, TableRaw, HeadCell, TableData} from './TransactionHistory.styled';
 
 export const TransactionHistory = ({items}) => {
     return (
-    <table className={css.transactionsTable}>
-      <thead className={css.transactionsTableHead}>
-        <tr>
-        <th>Type</th>
-        <th>Amount</th>
-        <th>Currency</th>
-        </tr>
-      </thead>
-      <tbody className={css.transactionsTableBody}>
+    <TransactionsTable>
+      <TableHead>
+        <TableRaw>
+        <HeadCell>Type</HeadCell>
+        <HeadCell>Amount</HeadCell>
+        <HeadCell>Currency</HeadCell>
+        </TableRaw>
+      </TableHead>
+      <TableBody>
         {items.map(({id, type, amount, currency}) =>
-        <tr key={id}>
-        <td>{type}</td>
-        <td>{amount}</td>
-        <td>{currency}</td>
-        </tr>
+        <TableRaw key={id}>
+        <TableData>{type}</TableData>
+        <TableData>{amount}</TableData>
+        <TableData>{currency}</TableData>
+        </TableRaw>
        )}
-      </tbody>
-    </table>
+      </TableBody>
+    </TransactionsTable>
     )
 }
 

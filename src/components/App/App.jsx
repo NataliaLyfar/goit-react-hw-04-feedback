@@ -1,4 +1,4 @@
-import css from './App.module.css'
+import {AppWrapper} from './App.styled';
 import {UserProfile} from '../userprofile/UserProfile';
 import user from 'data/user.json';
 import {Statistics} from '../statistics/Statistics';
@@ -10,11 +10,11 @@ import transactions from 'data/transactions.json';
 
 export const App = () => {
   return (
-    <div className={css.appWrapper}>
+    <AppWrapper>
   <UserProfile userData={user}/>
   <Statistics title="Upload stats" stats={data}/>
   <FriendList friends={friends}/>
   <TransactionHistory items={transactions}/>
-    </div>
+    </AppWrapper>
   );
 };
