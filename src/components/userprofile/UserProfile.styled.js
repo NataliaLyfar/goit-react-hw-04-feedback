@@ -1,4 +1,4 @@
-import styled from '@emotion/styled';
+import styled from 'styled-components';
 
 export const Profile = styled.div` 
     margin: 0 auto;
@@ -11,32 +11,32 @@ export const Description = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 30px;
-    background-color: white;
+    padding: ${p => p.theme.space[6]}px;
+    background-color: ${p => p.theme.colors.white};
     `;
 export const Avatar = styled.img` 
     display: block;
     width: 180px;
-    padding: 15px 0;
-    border-radius: 50%;
+    padding: ${p => p.theme.space[4]}px 0;
+    border-radius: ${p => p.theme.radii.round};
     box-shadow: 0 0 10px -1px rgba(92, 100, 100, 0.587);
     `;
 export const Name = styled.p`
-    font-size: 22px;
-    font-weight: 700;
-    margin-top: 10px;
+    font-size: ${p => p.theme.fontSizes.xl};
+    font-weight: ${p => p.theme.fontWeights.bold};
+    margin-top: ${p => p.theme.space[3]}px;
     `;
 export const Tag = styled.p` 
-    font-size: 16px;
-    font-weight: 500;
-    margin-top: 10px;
-    color: grey;
+    font-size: ${p => p.theme.fontSizes.m};
+    font-weight: ${p => p.theme.fontWeights.semibold};
+    margin-top: ${p => p.theme.space[3]}px;
+    color: ${p => p.theme.colors.primary};
     `;
 export const Location =styled.p` 
-    font-size: 18px;
-    font-weight: 500;
-    margin-top: 10px;
-    color: grey;
+    font-size: ${p => p.theme.fontSizes.l};
+    font-weight: ${p => p.theme.fontWeights.semibold};
+    margin-top: ${p => p.theme.space[3]}px;
+    color: ${p => p.theme.colors.primary};
     `;
 export const StatsList = styled.ul`
     width: 310px;
@@ -44,30 +44,30 @@ export const StatsList = styled.ul`
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgba(240, 255, 255, 0.587);
+    background-color: ${p => p.theme.colors.tertiary};
     `;
 export const StatsItem = styled.li`
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
     flex-basis: calc(100% / 3);
-    border: solid 1px rgba(128, 128, 128, 0.2);
+    border: ${p => p.theme.borders.normal} ${p => p.theme.colors.shade};
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 25px 0;
-    color: grey;
+    padding: ${p => p.theme.space[5]}px 0;
+    color: ${p => p.theme.colors.primary};
     cursor: pointer;
     &:hover{
-    background-color: rgba(128, 128, 128, 0.2);
+    background-color: ${p => p.theme.colors.shade};
     }
     `;
 export const StatsNumber = styled.span` 
-    font-size: 16px;
-    font-weight: 500;
-    color: black;
+    font-size: ${p => p.theme.fontSizes.m};
+    font-weight: ${p => p.theme.fontWeights.semibold};
+    color: ${p => p.theme.colors.black};
     `;
 export const StatsLabel = styled.span` 
-    font-size: 15px;
-    font-weight: 400;
-    color: black;
+    font-size: ${p => p.theme.fontSizes.m};
+    font-weight: ${p => p.theme.fontWeights.normal};
+    color: ${p => p.theme.colors.black};
     `;

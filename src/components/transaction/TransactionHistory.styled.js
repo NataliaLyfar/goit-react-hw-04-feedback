@@ -1,44 +1,44 @@
-import styled from '@emotion/styled';
+import styled from 'styled-components';
 
 export const TransactionsTable = styled.table`
   width: 872px;
   text-align: center;
-  border-radius: 5px;
+  border-radius: ${p => p.theme.radii.normal};
   box-shadow: 0 0 10px -1px;
   overflow: hidden;
   border-collapse: collapse;
-  background-color: white;
+  background-color: ${p => p.theme.colors.white};
   `;
 export const TableHead = styled.thead`
-  background-color: #00bcd5;
-  color: #fafafa;
+  background-color: ${p => p.theme.colors.accent};
+  color: ${p => p.theme.colors.secondary};
   text-transform: uppercase;
   `;
 export const TableBody = styled.tbody` 
-  color: #6f7478;
+  color: ${p => p.theme.colors.text};
   `;
 export const TableRaw = styled.tr` 
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   cursor: pointer;
   &:not(:last-child) {
-    border-bottom: 1px solid #e4e4e4;
+    border-bottom: ${p => p.theme.borders.normal} ${p => p.theme.colors.muted};
   };
   &:nth-of-type(2n) {
-    background-color: #ecf1f4;
+    background-color: ${p => p.theme.colors.shadow};
   }
   &:hover, &:nth-of-type(2n):hover {
-    background-color: rgba(93, 159, 159, 0.289);
+    background-color: ${p => p.theme.colors.hoverShadow};
   };
   `;
   export const HeadCell = styled.th`
-  padding: 10px 10px;
+  padding: ${p => p.theme.space[3]}px;
   &:not(:last-child) {
       border-right: 1px solid #e4e4e4;
     }
   `;
   export const TableData = styled.th`
-  padding: 10px 10px;
+  padding: ${p => p.theme.space[3]}px;
   &:not(:last-child) {
-    border-right: 1px solid #e4e4e4;
+    border-right: ${p => p.theme.borders.normal} ${p => p.theme.colors.muted};
   }
   `;
