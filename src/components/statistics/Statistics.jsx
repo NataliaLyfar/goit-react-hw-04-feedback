@@ -1,31 +1,29 @@
 import PropTypes from 'prop-types';
-import {StatisticsBox, Title, StatsticsList, StatisticsItem, StatisticsLabel, Percentage} from './Statistics.styled';
-import {getRandomHexColor} from 'helpers/getRandomColor';
-import data from 'data/data.json';
+import SumStatistics from './SumStatistics';
+import { BasicStatsList, BasicStatsItem } from './Statistics.styled';
 
-export const Statistics = ({title="Upload stats"}) => {
-    return (
-      <StatisticsBox>
-        {title && <Title>{title}</Title>}
-        <StatsticsList  data = {data}>
-          {data.map(({id, label, percentage}) =>
-          <StatisticsItem backgroundColor={getRandomHexColor()} key={id}> 
-           <StatisticsLabel>{label}</StatisticsLabel>
-           <Percentage>{percentage}%</Percentage>
-          </StatisticsItem>
-          )}
-        </StatsticsList>
-      </StatisticsBox>
-    )
+const Statistics = ({options, values, total, positivePercentage}) => {
+    return(
+      <>
+        <BasicStatsList>
+          {options.map(option => (
+            <BasicStatsItem key={option}>
+              {option}: {values[option]}
+            </BasicStatsItem>
+          ))}
+        </BasicStatsList>
+        <SumStatistics 
+        total={total()}
+        positivePercentage={positivePercentage()} />
+        </>
+        )
 };
 
-Statistics.propTypes = {
-    title: PropTypes.string,
-    data:  PropTypes.arrayOf(PropTypes.shape({
-        id: PropTypes.string.isRequired,
-        label: PropTypes.string.isRequired,
-        percentage: PropTypes.number.isRequired,
-    })
-    )
-};
+  Statistics.propTypes = {
+     options: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
+     values: PropTypes.objectOf(PropTypes.number.isRequired).isRequired,
+     total: PropTypes.func.isRequired,
+     positivePercentage: PropTypes.func.isRequired,
+  };
 
+export default Statistics;

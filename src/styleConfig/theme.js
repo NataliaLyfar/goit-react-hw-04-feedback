@@ -1,21 +1,14 @@
 export const theme = {
     colors: {
-      black: '#000',
-      white: '#fff',
-      text: '#6f7478',
-      background: 'rgba(50, 128, 170, 0.15)',
-      primary: '#808080',
-      secondary: '#fafafa',
-      tertiary: 'rgba(240, 255, 255, 0.587)',
-      shadow: '#ecf1f4',
-      shade: 'rgba(128, 128, 128, 0.2)',
-      accent: '#00bcd5',
-      hoverShadow: 'rgba(93, 159, 159, 0.289)',
-      muted: '#e4e4e4',
+      primary: '#3E2D2D',
+      secondary: '#B8860B',
+      tertiary: '#DAA520',
+      accent: '#FFDEAD',
     },
-    space: [0, 2, 5, 10, 20, 25, 30, 35, 50],
+    space: [5, 10, 15, 20, 25, 30, 35, 50, 80, 250],
     fonts: {
-      body: 'system-ui, sans-serif',
+      body: 'Smooch, cursive',
+
       monospace: 'Menlo, monospace',
     },
     fontSizes: {
@@ -24,10 +17,11 @@ export const theme = {
       m: '16px',
       l: '20px',
       xl: '30px',
+      xxl: '40px'
     },
     fontWeights: {
       normal: 400,
-      semibold: 500,
+      semibold: 600,
       bold: 700,
     },
     lineHeights: {
@@ -40,7 +34,8 @@ export const theme = {
     },
     radii: {
       none: '0',
-      normal: '5px',
+      normal: '45%',
       round: '50%',
     },
+
   };
