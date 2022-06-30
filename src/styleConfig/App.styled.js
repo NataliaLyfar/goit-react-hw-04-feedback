@@ -11,6 +11,7 @@ const Container = styled.div`
   padding-top: 5vh;
   padding-left: 20vw;
   background-image: url(${CoffeePic});
+  background-color: ${p => p.theme.colors.background};
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;

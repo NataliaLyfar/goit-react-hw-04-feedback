@@ -8,6 +8,7 @@ gap: ${p => p.theme.space[4]}px;
 margin-top: ${p => p.theme.space[2]}px;
 `;
 export const Button = styled.button`
+transition: all .3s ease;
 display: flex;
 align-items: center;
 justify-content: center;

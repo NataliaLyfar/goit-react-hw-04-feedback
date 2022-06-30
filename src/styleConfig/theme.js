@@ -4,12 +4,11 @@ export const theme = {
       secondary: '#B8860B',
       tertiary: '#DAA520',
       accent: '#FFDEAD',
+      background: '#D2D2C2',
     },
     space: [5, 10, 15, 20, 25, 30, 35, 50, 80, 250],
     fonts: {
       body: 'Smooch, cursive',
-
-      monospace: 'Menlo, monospace',
     },
     fontSizes: {
       xs: '12px',
@@ -37,5 +36,4 @@ export const theme = {
       normal: '45%',
       round: '50%',
     },
-
   };

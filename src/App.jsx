@@ -31,9 +31,10 @@ countPositiveFeedbackPercentage = () => {
   return good ? Math.round((good / this.countTotalFeedback()) * 100) : 0;
 };
 
+options = Object.keys(this.state);
 render() {
-  const state = this.state;
-  const options = Object.keys(state);
+ const state = this.state;
+ const options = this.options;
   return (
     <Container>
       <Header title={"Expresso Cafe Feedback Page"}/>
