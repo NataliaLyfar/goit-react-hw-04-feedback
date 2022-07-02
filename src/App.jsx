@@ -1,10 +1,12 @@
 import React from 'react';
-import Statistics from 'components/statistics/Statistics';
-import FeedbackOptions from 'components/feedbackOptions/FeedbackOptions';
-import Section from 'components/section/Section';
-import Notification from 'components/notification/Notification';
-import Header from 'components/header/Header';
-import Container from './styleConfig/App.styled';
+import { Container } from 'components/container';
+import { Header } from 'components/header';
+import { Section } from 'components/section';
+import { FeedbackOptions } from 'components/feedbackOptions';
+import { Statistics }from 'components/statistics';
+import { Notification } from 'components/notification';
+
+
 
 export class App extends React.Component {
   state = {
@@ -56,6 +58,6 @@ render() {
         )}
       </Section>
     </Container>
-      )
-  }
+    );
+  };
 };

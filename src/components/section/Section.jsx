@@ -1,7 +1,13 @@
 import PropTypes from 'prop-types';
-import Subtitle from './Section.styled'
+import styled from 'styled-components';
 
-const Section = ({title, children}) => {
+const Subtitle = styled.h2`
+font-size: ${p => p.theme.fontSizes.xl};
+font-weight: ${p => p.theme.fontWeights.bold};
+color: ${p => p.theme.colors.secondary};
+`;
+
+export const Section = ({title, children}) => {
     return (
         <section>
             <Subtitle>{title}</Subtitle>
@@ -15,4 +21,3 @@ Section.propTypes = {
     children: PropTypes.element,
 };
 
-export default Section;

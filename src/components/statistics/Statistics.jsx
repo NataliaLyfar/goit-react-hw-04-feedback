@@ -1,8 +1,21 @@
 import PropTypes from 'prop-types';
-import SumStatistics from './SumStatistics';
-import { BasicStatsList, BasicStatsItem } from './Statistics.styled';
+import styled from 'styled-components';
+import { SumStatistics } from './SumStatistics';
 
-const Statistics = ({options, values, total, positivePercentage}) => {
+const BasicStatsList = styled.ul`
+display: flex;
+align-items: center;
+justify-content: start;
+margin-top: ${p => p.theme.space[2]}px;
+`;
+const BasicStatsItem = styled.li`
+padding: 0 ${p => p.theme.space[2]}px;
+font-size: ${p => p.theme.fontSizes.m};
+font-weight: ${p => p.theme.fontWeights.semibold};
+color: ${p => p.theme.colors.primary};
+`;
+
+export const Statistics = ({options, values, total, positivePercentage}) => {
     return(
       <>
         <BasicStatsList>
@@ -15,8 +28,8 @@ const Statistics = ({options, values, total, positivePercentage}) => {
         <SumStatistics 
         total={total()}
         positivePercentage={positivePercentage()} />
-        </>
-        )
+      </>
+      )
 };
 
   Statistics.propTypes = {
@@ -26,4 +39,3 @@ const Statistics = ({options, values, total, positivePercentage}) => {
      positivePercentage: PropTypes.func.isRequired,
   };
 
-export default Statistics;

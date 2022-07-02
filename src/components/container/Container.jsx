@@ -1,8 +1,7 @@
 import styled from 'styled-components';
-import CoffeePic from './mixed-coffee-cups-with-a-leaf-on-a-white-wooden-textured-wallpaper-min.jpg';
+import CoffeePic from 'asset/background.jpg';
 
-
-const Container = styled.div`
+export const Container = styled.div`
   display: flex;
   flex-direction: column;
   width: 100vw;
@@ -17,5 +16,3 @@ const Container = styled.div`
   background-size: cover;
   font-family: ${p => p.theme.fonts.body};
   `;
-
-  export default Container;
