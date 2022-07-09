@@ -9,9 +9,9 @@ color: ${p => p.theme.colors.primary};
 `;
 
 export const Notification = ({message}) => {
-    return <Message>{message}</Message>
+  return <Message>{message}</Message>
 };
 
 Notification.propTypes = {
-    message: PropTypes.string,
+  message: PropTypes.string,
 };

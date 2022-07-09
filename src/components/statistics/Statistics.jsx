@@ -16,26 +16,26 @@ color: ${p => p.theme.colors.primary};
 `;
 
 export const Statistics = ({options, values, total, positivePercentage}) => {
-    return(
-      <>
-        <BasicStatsList>
-          {options.map(option => (
-            <BasicStatsItem key={option}>
-              {option}: {values[option]}
-            </BasicStatsItem>
-          ))}
-        </BasicStatsList>
-        <SumStatistics 
+  return (
+    <>
+      <BasicStatsList>
+        {options.map(option => (
+          <BasicStatsItem key={option}>
+            {option}: {values[option]}
+          </BasicStatsItem>
+        ))}
+      </BasicStatsList>
+      <SumStatistics 
         total={total()}
         positivePercentage={positivePercentage()} />
-      </>
-      )
+    </>
+    );
 };
 
-  Statistics.propTypes = {
-     options: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
-     values: PropTypes.objectOf(PropTypes.number.isRequired).isRequired,
-     total: PropTypes.func.isRequired,
-     positivePercentage: PropTypes.func.isRequired,
-  };
+Statistics.propTypes = {
+  options: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
+  values: PropTypes.objectOf(PropTypes.number.isRequired).isRequired,
+  total: PropTypes.func.isRequired,
+  positivePercentage: PropTypes.func.isRequired,
+};
 

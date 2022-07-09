@@ -18,24 +18,25 @@ font-weight: ${p => p.theme.fontWeights.semibold};
 color: ${p => p.theme.colors.secondary};
 svg {
     margin-right: ${p => p.theme.space[1]}px;
-} 
+};
 `;
 
 export const SumStatistics = ({total, positivePercentage}) => {
-    return(
-        <SumStatsList>
-          <SumStatsItem>
+  return (
+      <SumStatsList>
+        <SumStatsItem>
           <FaJava/>
-            Total: {total}
-          </SumStatsItem>
-          <SumStatsItem>
-            <FaRegGrinStars/>
-            Positive feedback: {positivePercentage}%
-          </SumStatsItem>
-        </SumStatsList>)
+          Total: {total}
+        </SumStatsItem>
+        <SumStatsItem>
+          <FaRegGrinStars/>
+          Positive feedback: {positivePercentage}%
+        </SumStatsItem>
+      </SumStatsList>
+      );
 };
 
-    SumStatistics.propTypes = {
-total: PropTypes.number.isRequired,
-positivePercentage: PropTypes.number.isRequired,
+SumStatistics.propTypes = {
+  total: PropTypes.number.isRequired,
+  positivePercentage: PropTypes.number.isRequired,
 };

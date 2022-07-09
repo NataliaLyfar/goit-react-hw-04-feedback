@@ -34,20 +34,19 @@ background-color: ${p => p.theme.colors.accent};
 `;
 
 export const FeedbackOptions = ({options, onLeaveFeedback}) => {
-    return (
-        <ButtonBox>
-          {options.map(option => (
-             <Button
-             key = {option}
-             type='button'
-             onClick={onLeaveFeedback}
-             id = {option}
-             >
-             {option}
-             </Button>
+  return (
+      <ButtonBox>
+        {options.map(option => (
+          <Button
+            key = {option}
+            type='button'
+            value = {option}
+            onClick={()=>onLeaveFeedback(option)}>
+            {option}
+          </Button>
         ))}
-        </ButtonBox>
-      )
+      </ButtonBox>
+    )
   };
 
 FeedbackOptions.propTypes = {

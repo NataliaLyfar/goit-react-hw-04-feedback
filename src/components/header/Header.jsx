@@ -8,9 +8,9 @@ color: ${p => p.theme.colors.primary};
 `;
 
 export const Header = ({title}) => {
-    return <Title>{title}</Title>
+  return <Title>{title}</Title>
 };
 
 Header.propTypes = {
-    title: PropTypes.string,
+  title: PropTypes.string,
 };
