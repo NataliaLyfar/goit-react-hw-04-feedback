@@ -1,10 +1,10 @@
 import {useState} from 'react';
-import { Container } from 'components/Container';
-import { Header } from 'components/Header';
-import { Section } from 'components/Section';
-import { FeedbackOptions } from 'components/FeedbackOptions';
-import { Statistics }from 'components/Statistics';
-import { Notification } from 'components/Notification';
+import { Container } from 'components/container';
+import { Header } from 'components/header';
+import { Section } from 'components/section';
+import { FeedbackOptions } from 'components/feedbackOptions';
+import { Statistics }from 'components/statistics';
+import { Notification } from 'components/notification';
 
 export const App = () => {
   const [feedback, setFeedback] = useState({
